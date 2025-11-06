@@ -353,7 +353,7 @@ export function SmartMeters() {
                     <Line
                       type="monotone"
                       dataKey="wattage"
-                      stroke="#111827"
+                      stroke="#0487ba"
                       strokeWidth={2}
                       dot={false}
                     />
