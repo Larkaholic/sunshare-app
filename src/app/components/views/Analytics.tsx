@@ -166,12 +166,12 @@ export function Analytics() {
           <AreaChart data={consumptionData}>
             <defs>
               <linearGradient id="colorConsumption" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#05aceb" stopOpacity={0.7} />
-                <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
+          <stop offset="5%" stopColor="#05aceb" stopOpacity={0.7} />
+          <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="colorProduction" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#f4941c" stopOpacity={0.7} />
-                <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
+          <stop offset="5%" stopColor="#f4941c" stopOpacity={0.7} />
+          <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -179,16 +179,16 @@ export function Analytics() {
             <YAxis stroke="#9ca3af" style={{ fontSize: '10px' }} className="md:text-xs" />
             <Tooltip
               contentStyle={{
-                backgroundColor: '#ffffff',
-                border: '1px solid #e5e7eb',
-                borderRadius: '8px',
-                fontSize: '12px',
+          backgroundColor: '#ffffff',
+          border: '1px solid #e5e7eb',
+          borderRadius: '8px',
+          fontSize: '12px',
               }}
             />
             <Area
               type="monotone"
               dataKey="consumption"
-              stroke="#111827"
+              stroke="#0487ba"
               strokeWidth={2}
               fillOpacity={1}
               fill="url(#colorConsumption)"
@@ -197,7 +197,7 @@ export function Analytics() {
             <Area
               type="monotone"
               dataKey="production"
-              stroke="#6b7280"
+              stroke="#c67615"
               strokeWidth={2}
               fillOpacity={1}
               fill="url(#colorProduction)"
