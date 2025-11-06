@@ -26,7 +26,7 @@ export function Sidebar({ activeView, onViewChange, isOpen, onClose }: SidebarPr
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden lg:block bg-white border-r border-gray-200 w-64 p-6">
+      <aside className="hidden lg:block bg-card border-r border-border w-64 p-6">
         <nav className="space-y-2">
           {menuItems.map((item) => {
             const Icon = item.icon;
@@ -39,8 +39,8 @@ export function Sidebar({ activeView, onViewChange, isOpen, onClose }: SidebarPr
                 whileHover={{ x: 4 }}
                 className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                   isActive
-                    ? 'bg-gray-900 text-white'
-                    : 'text-gray-600 hover:bg-gray-100'
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-muted-foreground hover:bg-muted'
                 }`}
               >
                 <Icon className="w-5 h-5" />
@@ -70,12 +70,12 @@ export function Sidebar({ activeView, onViewChange, isOpen, onClose }: SidebarPr
               animate={{ x: 0 }}
               exit={{ x: -280 }}
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              className="lg:hidden fixed left-0 top-0 bottom-0 w-72 bg-white border-r border-gray-200 z-50 p-6"
+              className="lg:hidden fixed left-0 top-0 bottom-0 w-72 bg-card border-r border-border z-50 p-6"
             >
               <div className="flex items-center justify-between mb-6">
-                <span className="text-lg text-gray-900">Menu</span>
+                <span className="text-lg text-foreground">Menu</span>
                 <Button variant="ghost" size="icon" onClick={onClose}>
-                  <X className="w-5 h-5 text-gray-700" />
+                  <X className="w-5 h-5 text-foreground" />
                 </Button>
               </div>
               <nav className="space-y-2">
@@ -89,8 +89,8 @@ export function Sidebar({ activeView, onViewChange, isOpen, onClose }: SidebarPr
                       onClick={() => handleViewChange(item.id)}
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                         isActive
-                          ? 'bg-gray-900 text-white'
-                          : 'text-gray-600 hover:bg-gray-100'
+                          ? 'bg-primary text-primary-foreground'
+                          : 'text-muted-foreground hover:bg-muted'
                       }`}
                     >
                       <Icon className="w-5 h-5" />

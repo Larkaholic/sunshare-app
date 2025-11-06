@@ -25,15 +25,15 @@ export default function AppFromFigma() {
         return (
           <div className="space-y-8">
             <div>
-              <h1 className="text-xl md:text-2xl text-gray-900 mb-2">
+              <h1 className="text-xl md:text-2xl text-foreground mb-2">
                 Settings
               </h1>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-muted-foreground">
                 Configure your SunShare preferences
               </p>
             </div>
-            <div className="bg-white rounded-xl p-8 md:p-12 shadow-sm border border-gray-200 text-center">
-              <p className="text-gray-600">Settings panel coming soon</p>
+            <div className="bg-card rounded-xl p-8 md:p-12 shadow-sm border border-border text-center">
+              <p className="text-muted-foreground">Settings panel coming soon</p>
             </div>
           </div>
         );
@@ -43,8 +43,10 @@ export default function AppFromFigma() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <TopNav onMenuClick={() => setIsSidebarOpen(true)} />
+      {/* Brand accent bar */}
+      <div className="h-1 bg-primary" />
 
       <div className="flex">
         <Sidebar

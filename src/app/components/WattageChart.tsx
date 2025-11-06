@@ -40,27 +40,27 @@ export function WattageChart() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
-      className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
+      className="bg-card rounded-xl p-4 md:p-6 shadow-sm border border-border"
     >
-      <h2 className="text-base md:text-lg text-gray-900 mb-4 md:mb-6">Live Wattage Monitoring</h2>
+      <h2 className="text-base md:text-lg text-foreground mb-4 md:mb-6">Live Wattage Monitoring</h2>
       <ResponsiveContainer width="100%" height={250} className="md:!h-[300px]">
         <LineChart data={data}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
           <XAxis 
             dataKey="time" 
-            stroke="#9ca3af"
+            stroke="var(--color-muted-foreground)"
             style={{ fontSize: '10px' }}
             className="md:text-xs"
           />
           <YAxis 
-            stroke="#9ca3af"
+            stroke="var(--color-muted-foreground)"
             style={{ fontSize: '10px' }}
             className="md:text-xs"
           />
           <Tooltip
             contentStyle={{
-              backgroundColor: '#ffffff',
-              border: '1px solid #e5e7eb',
+              backgroundColor: 'var(--color-card)',
+              border: '1px solid var(--color-border)',
               borderRadius: '8px',
               fontSize: '12px',
             }}
@@ -68,7 +68,7 @@ export function WattageChart() {
           <Line
             type="monotone"
             dataKey="wattage"
-            stroke="#111827"
+            stroke="#1373c3"
             strokeWidth={2}
             dot={false}
             animationDuration={500}

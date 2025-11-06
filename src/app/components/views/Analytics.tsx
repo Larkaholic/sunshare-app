@@ -166,12 +166,12 @@ export function Analytics() {
           <AreaChart data={consumptionData}>
             <defs>
               <linearGradient id="colorConsumption" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#111827" stopOpacity={0.1} />
-                <stop offset="95%" stopColor="#111827" stopOpacity={0} />
+                <stop offset="5%" stopColor="#05aceb" stopOpacity={0.7} />
+                <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="colorProduction" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#6b7280" stopOpacity={0.1} />
-                <stop offset="95%" stopColor="#6b7280" stopOpacity={0} />
+                <stop offset="5%" stopColor="#f4941c" stopOpacity={0.7} />
+                <stop offset="95%" stopColor="#ffffff" stopOpacity={0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
