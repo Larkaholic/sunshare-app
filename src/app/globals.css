@@ -3,19 +3,59 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Brand palette */
+  --brand-primary: #1373c3; /* blue */
+  --brand-secondary: #f4941c; /* orange */
+  --brand-accent: #7ca43c; /* green */
 }
 
 @theme inline {
+  /* Base tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand tokens (used across shadcn/ui components) */
+  --color-primary: var(--brand-primary);
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: var(--brand-secondary);
+  --color-secondary-foreground: #0a0a0a;
+
+  --color-accent: var(--brand-accent);
+  --color-accent-foreground: #0a0a0a;
+
+  /* Supporting tokens */
+  --color-muted: #f3f4f6; /* gray-100 */
+  --color-muted-foreground: #6b7280; /* gray-500 */
+
+  --color-border: #e5e7eb; /* gray-200 */
+  --color-input: #e5e7eb; /* border color */
+  --color-input-background: #ffffff; /* field bg in light */
+  --color-switch-background: #e5e7eb;
+
+  --color-ring: var(--brand-primary);
+
+  --color-card: var(--background);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--background);
+  --color-popover-foreground: var(--foreground);
+
+  --color-destructive: #ef4444; /* red-500 */
+  --color-destructive-foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    /* Optional dark adjustments for surfaces/inputs */
+    --color-input: #374151; /* gray-700 */
+    --color-input-background: #111827; /* gray-900 */
+    --color-switch-background: #374151;
+    --color-muted: #111827; /* subtle surfaces */
+    --color-muted-foreground: #9ca3af; /* gray-400 */
   }
 }
 
