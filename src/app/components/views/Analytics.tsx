@@ -87,15 +87,15 @@ export function Analytics() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <Zap className="w-5 h-5 text-gray-700" />
-            </div>
-            <span className="text-xs text-gray-600">Total Consumption</span>
+        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#1373c3' }}>
+          <Zap className="w-5 h-5 text-white" />
+        </div>
+        <span className="text-xs text-gray-600">Total Consumption</span>
           </div>
           <div className="text-xl md:text-2xl text-gray-900">4,420 kWh</div>
           <div className="flex items-center gap-1 text-xs text-green-600 mt-1">
-            <TrendingDown className="w-3 h-3" />
-            <span>-8.2% vs last month</span>
+        <TrendingDown className="w-3 h-3" />
+        <span>-8.2% vs last month</span>
           </div>
         </motion.div>
 
@@ -106,15 +106,15 @@ export function Analytics() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <TrendingUp className="w-5 h-5 text-gray-700" />
-            </div>
-            <span className="text-xs text-gray-600">Total Production</span>
+        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#f4941c' }}>
+          <TrendingUp className="w-5 h-5 text-white" />
+        </div>
+        <span className="text-xs text-gray-600">Total Production</span>
           </div>
           <div className="text-xl md:text-2xl text-gray-900">4,060 kWh</div>
           <div className="flex items-center gap-1 text-xs text-green-600 mt-1">
-            <TrendingUp className="w-3 h-3" />
-            <span>+12.5% vs last month</span>
+        <TrendingUp className="w-3 h-3" />
+        <span>+12.5% vs last month</span>
           </div>
         </motion.div>
 
@@ -125,15 +125,15 @@ export function Analytics() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <DollarSign className="w-5 h-5 text-gray-700" />
-            </div>
-            <span className="text-xs text-gray-600">Cost This Month</span>
+        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#7ca43c' }}>
+          <DollarSign className="w-5 h-5 text-white" />
+        </div>
+        <span className="text-xs text-gray-600">Cost This Month</span>
           </div>
           <div className="text-xl md:text-2xl text-gray-900">$148.00</div>
           <div className="flex items-center gap-1 text-xs text-green-600 mt-1">
-            <TrendingDown className="w-3 h-3" />
-            <span>-5.1% vs last month</span>
+        <TrendingDown className="w-3 h-3" />
+        <span>-5.1% vs last month</span>
           </div>
         </motion.div>
 
@@ -144,10 +144,10 @@ export function Analytics() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <Calendar className="w-5 h-5 text-gray-700" />
-            </div>
-            <span className="text-xs text-gray-600">Avg. Daily Usage</span>
+        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#1373c3' }}>
+          <Calendar className="w-5 h-5 text-white" />
+        </div>
+        <span className="text-xs text-gray-600">Avg. Daily Usage</span>
           </div>
           <div className="text-xl md:text-2xl text-gray-900">315 kWh</div>
           <div className="text-xs text-gray-500 mt-1">Per day average</div>
