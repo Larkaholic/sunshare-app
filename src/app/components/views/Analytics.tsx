@@ -26,14 +26,14 @@ export function Analytics() {
 
   // Peak hours data
   const peakHoursData = [
-    { hour: '00:00', usage: 120 },
-    { hour: '03:00', usage: 90 },
-    { hour: '06:00', usage: 150 },
-    { hour: '09:00', usage: 280 },
-    { hour: '12:00', usage: 320 },
-    { hour: '15:00', usage: 290 },
-    { hour: '18:00', usage: 380 },
-    { hour: '21:00', usage: 340 },
+    { hour: '00:00', usage: 120, fill: '#1373c3' },
+    { hour: '03:00', usage: 90, fill: '#1373c3' },
+    { hour: '06:00', usage: 150, fill: '#f4941c' },
+    { hour: '09:00', usage: 280, fill: '#7ca43c' },
+    { hour: '12:00', usage: 320, fill: '#1373c3' },
+    { hour: '15:00', usage: 290, fill: '#7ca43c' },
+    { hour: '18:00', usage: 380, fill: '#f4941c' },
+    { hour: '21:00', usage: 340, fill: '#1373c3' },
   ];
 
   // Cost breakdown
@@ -48,9 +48,9 @@ export function Analytics() {
 
   // Energy distribution
   const distributionData = [
-    { name: 'Main Building', value: 35, color: '#111827' },
-    { name: 'Solar Array', value: 28, color: '#4b5563' },
-    { name: 'EV Charging', value: 22, color: '#6b7280' },
+    { name: 'Main Building', value: 35, color: '#1373c3' },
+    { name: 'Solar Array', value: 28, color: '#7ca43c' },
+    { name: 'EV Charging', value: 22, color: '#f4941c' },
     { name: 'Office Wing', value: 15, color: '#9ca3af' },
   ];
 
@@ -229,7 +229,11 @@ export function Analytics() {
                   fontSize: '12px',
                 }}
               />
-              <Bar dataKey="usage" fill="#111827" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="usage" radius={[4, 4, 0, 0]}>
+                {peakHoursData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.fill} />
+                ))}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </motion.div>
@@ -308,9 +312,9 @@ export function Analytics() {
             <Line
               type="monotone"
               dataKey="cost"
-              stroke="#111827"
+              stroke="#7ca43c"
               strokeWidth={2}
-              dot={{ fill: '#111827', r: 4 }}
+              dot={{ fill: '#7ca43c', r: 4 }}
             />
           </LineChart>
         </ResponsiveContainer>
