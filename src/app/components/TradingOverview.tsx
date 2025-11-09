@@ -8,6 +8,7 @@ const tradingData = [
     unit: 'kWh',
     icon: Coins,
     change: '+12.5%',
+    bgColor: '#1373c3',
   },
   {
     label: 'Energy Shared',
@@ -15,6 +16,7 @@ const tradingData = [
     unit: 'kWh',
     icon: Share2,
     change: '+8.2%',
+    bgColor: '#7ca43c',
   },
   {
     label: 'Transactions Made',
@@ -22,13 +24,14 @@ const tradingData = [
     unit: 'total',
     icon: Receipt,
     change: '+23',
+    bgColor: '#f4941c',
   },
 ];
 
 export function TradingOverview() {
   return (
     <div>
-      <h2 className="text-base md:text-lg text-foreground mb-4 md:mb-6">Trading Overview</h2>
+      <h2 className="text-base md:text-lg text-gray-900 mb-4 md:mb-6">Trading Overview</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         {tradingData.map((item, index) => {
           const Icon = item.icon;
@@ -38,20 +41,16 @@ export function TradingOverview() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 + 0.2 }}
-              whileHover={{ y: -4 }}
-              className="bg-card rounded-xl p-4 md:p-6 shadow-sm border border-border hover:shadow-md transition-shadow"
+              className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
             >
-              <div className="flex items-start justify-between mb-3 md:mb-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <Icon className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: item.bgColor }}>
+                  <Icon className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xs text-muted-foreground">{item.change}</span>
+                <span className="text-xs text-gray-600">{item.label}</span>
               </div>
-              <div className="text-xs text-muted-foreground mb-2">{item.label}</div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-xl md:text-2xl text-foreground">{item.value}</span>
-                <span className="text-sm text-muted-foreground">{item.unit}</span>
-              </div>
+              <div className="text-xl md:text-2xl text-gray-900 mb-1">{item.value} <span className="text-base text-gray-500">{item.unit}</span></div>
+              <div className="text-xs text-green-600">{item.change}</div>
             </motion.div>
           );
         })}

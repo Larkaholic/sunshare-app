@@ -173,8 +173,13 @@ export function SmartMeters() {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
-          <div className="text-xs text-gray-600 mb-2">Total Meters</div>
-          <div className="text-2xl md:text-3xl text-gray-900">{meters.length}</div>
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#1373c3' }}>
+              <Gauge className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xs text-gray-600">Total Meters</span>
+          </div>
+          <div className="text-xl md:text-2xl text-gray-900">{meters.length}</div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -182,8 +187,13 @@ export function SmartMeters() {
           transition={{ delay: 0.1 }}
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
-          <div className="text-xs text-gray-600 mb-2">Active</div>
-          <div className="text-2xl md:text-3xl text-green-600">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#7ca43c' }}>
+              <CheckCircle className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xs text-gray-600">Active</span>
+          </div>
+          <div className="text-xl md:text-2xl text-green-600">
             {meters.filter((m) => m.status === 'active').length}
           </div>
         </motion.div>
@@ -193,8 +203,13 @@ export function SmartMeters() {
           transition={{ delay: 0.2 }}
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
-          <div className="text-xs text-gray-600 mb-2">Warning</div>
-          <div className="text-2xl md:text-3xl text-yellow-600">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#f4941c' }}>
+              <AlertCircle className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xs text-gray-600">Warning</span>
+          </div>
+          <div className="text-xl md:text-2xl text-yellow-600">
             {meters.filter((m) => m.status === 'warning').length}
           </div>
         </motion.div>
@@ -204,14 +219,19 @@ export function SmartMeters() {
           transition={{ delay: 0.3 }}
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
-          <div className="text-xs text-gray-600 mb-2">Offline</div>
-          <div className="text-2xl md:text-3xl text-gray-500">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
+              <WifiOff className="w-5 h-5 text-gray-700" />
+            </div>
+            <span className="text-xs text-gray-600">Offline</span>
+          </div>
+          <div className="text-xl md:text-2xl text-gray-500">
             {meters.filter((m) => m.status === 'offline').length}
           </div>
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
         {/* Meter List */}
         <div className="lg:col-span-1 space-y-4">
           <h2 className="text-base md:text-lg text-gray-900">All Meters</h2>
@@ -261,7 +281,7 @@ export function SmartMeters() {
           key={selectedMeter}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-100"
+          className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
               >
           <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 md:mb-6 gap-3">
             <div className="min-w-0">
@@ -334,7 +354,7 @@ export function SmartMeters() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-100"
+          className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
               >
           <h3 className="text-sm font-semibold text-gray-900 mb-4">30-Minute History</h3>
           <ResponsiveContainer width="100%" height={200} className="md:!h-[250px]">
@@ -363,7 +383,7 @@ export function SmartMeters() {
               </motion.div>
             </>
           ) : (
-            <div className="bg-white rounded-xl p-8 md:p-12 shadow-sm border border-gray-100 text-center">
+            <div className="bg-white rounded-xl p-8 md:p-12 shadow-sm border border-gray-200 text-center">
               <Gauge className="w-10 h-10 md:w-12 md:h-12 text-gray-300 mx-auto mb-4" />
               <p className="text-sm md:text-base text-gray-500">Select a meter to view details</p>
             </div>

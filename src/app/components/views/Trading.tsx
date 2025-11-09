@@ -145,8 +145,8 @@ export function Trading() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <DollarSign className="w-5 h-5 text-gray-700" />
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#1373c3' }}>
+              <DollarSign className="w-5 h-5 text-white" />
             </div>
             <span className="text-xs text-gray-600">Available Balance</span>
           </div>
@@ -161,13 +161,16 @@ export function Trading() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <TrendingUp className="w-5 h-5 text-green-600" />
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#7ca43c' }}>
+              <TrendingUp className="w-5 h-5 text-white" />
             </div>
             <span className="text-xs text-gray-600">Total Sold</span>
           </div>
           <div className="text-xl md:text-2xl text-gray-900">3,582 kWh</div>
-          <div className="text-xs text-green-600 mt-1">+12.5% this month</div>
+          <div className="flex items-center gap-1 text-xs text-green-600 mt-1">
+            <TrendingUp className="w-3 h-3" />
+            <span>+12.5% this month</span>
+          </div>
         </motion.div>
 
         <motion.div
@@ -177,8 +180,8 @@ export function Trading() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
-              <TrendingDown className="w-5 h-5 text-blue-600" />
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#f4941c' }}>
+              <TrendingDown className="w-5 h-5 text-white" />
             </div>
             <span className="text-xs text-gray-600">Total Purchased</span>
           </div>
@@ -193,7 +196,7 @@ export function Trading() {
           className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100">
               <Users className="w-5 h-5 text-gray-700" />
             </div>
             <span className="text-xs text-gray-600">Active Listings</span>

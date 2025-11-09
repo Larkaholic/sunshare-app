@@ -41,9 +41,9 @@ export function DeviceList() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4 }}
-      className="bg-card rounded-xl p-4 md:p-6 shadow-sm border border-border"
+      className="bg-white rounded-xl p-4 md:p-6 shadow-sm border border-gray-200"
     >
-      <h2 className="text-base md:text-lg text-foreground mb-4 md:mb-6">Connected Devices</h2>
+      <h2 className="text-base md:text-lg text-gray-900 mb-4 md:mb-6">Connected Devices</h2>
       <div className="space-y-2 md:space-y-3">
         {devices.map((device, index) => (
           <motion.div
@@ -52,24 +52,24 @@ export function DeviceList() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.05 + 0.5 }}
             whileHover={{ x: 4 }}
-            className="flex items-center justify-between p-3 md:p-4 rounded-lg border border-border hover:bg-muted transition-colors"
+            className="flex items-center justify-between p-3 md:p-4 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             <div className="flex items-center gap-3 md:gap-4 min-w-0">
               <div
                 className={`w-2 h-2 rounded-full shrink-0 ${
-                  device.status === 'active' ? 'bg-accent' : 'bg-muted-foreground'
+                  device.status === 'active' ? 'bg-green-500' : 'bg-gray-400'
                 }`}
               />
               <div className="min-w-0">
-                <div className="text-xs md:text-sm text-foreground truncate">{device.id}</div>
-                <div className="text-xs text-muted-foreground">Last: {device.lastReading}</div>
+                <div className="text-xs md:text-sm text-gray-900 truncate">{device.id}</div>
+                <div className="text-xs text-gray-500">Last: {device.lastReading}</div>
               </div>
             </div>
             <div className="text-right shrink-0 ml-2">
-              <div className="text-xs md:text-sm text-foreground">
+              <div className="text-xs md:text-sm text-gray-900">
                 {device.status === 'active' ? `${device.wattage.toFixed(0)} W` : '—'}
               </div>
-              <div className="text-xs text-muted-foreground capitalize">{device.status}</div>
+              <div className="text-xs text-gray-500 capitalize">{device.status}</div>
             </div>
           </motion.div>
         ))}
