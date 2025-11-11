@@ -69,7 +69,7 @@ export function Analytics() {
               onClick={() => setTimeRange(range)}
               className={`px-3 md:px-4 py-2 rounded-lg text-xs md:text-sm transition-colors ${
                 timeRange === range
-                  ? 'bg-gray-900 text-white'
+                  ? 'bg-[#05aceb] text-white'
                   : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'
               }`}
             >
