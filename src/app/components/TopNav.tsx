@@ -1,5 +1,6 @@
-import { Sun, User, Menu } from 'lucide-react';
+import { User, Menu } from 'lucide-react';
 import { Button } from './ui/button';
+import Image from 'next/image';
 
 interface TopNavProps {
   onMenuClick: () => void;
@@ -19,8 +20,13 @@ export function TopNav({ onMenuClick }: TopNavProps) {
             <Menu className="w-5 h-5 text-foreground" />
           </Button>
           <div className="flex items-center gap-2">
-            <Sun className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-            <span className="text-xl md:text-2xl text-foreground tracking-tight">SunShare</span>
+            <Image 
+              src="/SunshareLogo.png" 
+              alt="SunShare Logo" 
+              width={40} 
+              height={40}
+              className="w-8 h-8 md:w-10 md:h-10"
+            />
           </div>
         </div>
 
